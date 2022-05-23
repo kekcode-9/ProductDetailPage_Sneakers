@@ -17,7 +17,7 @@ function Navbar ({cart,
         if (burgerOpen) {
             setBurgerClicked(!burgerClicked);
             setTimeout(() => {toggleBurgerOpen(!burgerOpen)},
-            1000);
+            500);
         } else {
             toggleBurgerOpen(!burgerOpen);
             setBurgerClicked(!burgerClicked);
@@ -29,7 +29,7 @@ function Navbar ({cart,
         if (cartOpen) {
             setCartClicked(!cartClicked);
             setTimeout(() => {setCartOpen(!cartOpen)},
-            1000);
+            500);
         } else {
             setCartOpen(!cartOpen);
             setCartClicked(!cartClicked);

@@ -1,6 +1,5 @@
 @import url("./slideShow.css");
 
-
 .overlay {
     background-color: black;
     opacity: 0.85;
@@ -8,4 +7,18 @@
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+@media screen and (min-width: 811px) {
+    .gallery {
+        width: min(50%, 400px);
+        padding-left: 2%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .gallery {
+        width: 100%;
+        padding-left: 0%;
+    }
 }

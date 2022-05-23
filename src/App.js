@@ -35,12 +35,7 @@ function App() {
       isInCart = {isInCart}
       setIsInCart = {setIsInCart}
       />
-      <div className="body"
-      style = {{flexDirection: (windowWidth>810) ? 'row' : 'column',
-      alignItems: (windowWidth>=720) ? '' : 'center',
-      paddingTop: (windowWidth>810) ? '6%' : '2%',
-      width: (windowWidth>400) ? '80%' : '100%'}}
-      >
+      <div className="body">
         <ImageGallery
         currentFocus={currentFocus}
         setCurrentFocus = {setCurrentFocus}
