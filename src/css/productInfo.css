@@ -1,0 +1,213 @@
+.product-info {
+    display: flex;
+    flex-direction: column;
+    /*
+    max-width: 40%;
+    min-width: 20%;
+    */
+    margin-top: 5%;
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.seller {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: hsl(26, 100%, 55%);
+    font-size: medium;
+}
+
+.product-name {
+    padding-top: 4%;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.product-description {
+    width: 100%;
+    max-height: 100%;
+    font-size: large;
+    font-weight: 400;
+    color: hsl(219, 9%, 45%);
+    padding-top: 6%;
+}
+
+.price-info {
+    padding-top: 3%;
+}
+
+@media screen and (min-width: 960px) {
+    .buying-option {
+        height: 8%;
+        width: 70%;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .buying-option {
+        width: 70%;
+        height: 25%;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .buying-option {
+        height: 25%;
+        width: 50%;
+        margin-top: 5%;
+        margin-bottom: 60%;
+    }
+
+    .price-info {
+        margin-top: 4%;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .seller {
+        font-size: small;
+        letter-spacing: 3px;
+    }
+
+    .product-name {
+        font-size: x-large;
+        letter-spacing: 1.5px;
+        padding-top: 4%;
+    }
+
+    .product-description {
+        font-size: large;
+        word-spacing: 8px;
+        padding-top: 5%;
+    }
+
+    .buying-option {
+        margin-top: 8%;
+        height: max(15vh, 20px);
+        width: 45%;
+    }
+
+    .price-info {
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .product-info {
+        padding: 0% 3% 5% 3%;
+    }
+    .buying-option {
+        margin-top: 8%;
+        height: 15vh;
+        width: 95%;
+    }
+}
+
+.buying-option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.quantity-selector {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(223, 64%, 98%);
+    border: solid;
+    border-color: transparent;
+    border-radius: 10px;
+}
+
+.quantity-selector > div {
+    display: inline-block;
+}
+
+.add-to-cart {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(25, 100%, 94%);
+    border: solid;
+    border-color: transparent;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 15px 25px hsl(26, 98%, 81%);
+}
+
+.add-to-cart:hover {
+    opacity: 0.6;
+}
+
+.add-to-cart:active {
+    opacity: 0.8;
+}
+
+#minus {
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#minus:hover {
+    color: hsl(25, 80%, 77%);
+}
+
+#plus {
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+#plus:hover {
+    color: hsl(25, 80%, 77%);
+}
+
+#quantity {
+    font-size: medium;
+    font-weight: 700;
+    padding-top: 3%;
+}
+
+#price {
+    display: inline-block;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+#discount {
+    display: inline-block;
+    margin-left: 3%;
+    color: hsl(26, 100%, 55%);
+    font-size: large;
+    font-weight: 700;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: solid;
+    border-color: transparent;
+    border-radius: 5px;
+    background-color: hsl(25, 100%, 94%);
+}
+
+#original-price {
+    padding-top: 2%;
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+    font-size: large;
+    font-weight: 700;
+}
