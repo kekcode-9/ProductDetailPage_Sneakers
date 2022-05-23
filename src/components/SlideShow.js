@@ -39,14 +39,8 @@ function SlideShow ({currentFocus,
     }
 
     return (
-        <div className = 'slider'
-        style={{flexDirection: (windowWidth>810) ? 'column' : 'row-reverse',
-                justifyContent: (windowWidth<=810 && windowWidth>=720) ? 'space-between' : 'center',
-                height: (windowWidth<=810 && windowWidth>=720) ? '100%' : ''}}
-        >
-            <div className = 'focus'
-            style={{width: (windowWidth<=810 && windowWidth>=720) ? '70%' : '100%'}}
-            >
+        <div className = 'slider'>
+            <div className = 'focus'>
                 <button type='button' 
                 className='slide-image'
                 id='prevButton'
@@ -61,10 +55,21 @@ function SlideShow ({currentFocus,
                     />
                 </button>
 
+                <button type='button'
+                className='close-modal'
+                style={{display: (showButtons && overlayDisplay) ? 'block' : 'none', 
+                        position: 'absolute', 
+                        top: '-8%', 
+                        right: '0%'}}
+                onClick = {() => {setOverlayDisplay(!overlayDisplay)}}
+                >
+                    <img src = "productDetailPageIcons/icon-close.svg"/>
+                </button>
+
                 <img 
+                className="focus-image"
                 src = {images[currentFocus].focus} 
                 onClick={() => {if(!overlayDisplay) setIsFocusClicked(true)}}
-                style = {{borderRadius: (windowWidth>=720) ? '10px' : '0px'}}
                 />
 
                 <button type='button'
@@ -79,8 +84,8 @@ function SlideShow ({currentFocus,
                 </button>
             </div>
 
-            <button type='button'
-            className='closeModal'
+            {/*<button type='button'
+            className='close-modal'
             style={{display: (showButtons && overlayDisplay) ? 'block' : 'none', 
                     position: 'absolute', 
                     top: '10%', 
@@ -88,21 +93,14 @@ function SlideShow ({currentFocus,
             onClick = {() => {setOverlayDisplay(!overlayDisplay)}}
             >
                 <img src = "productDetailPageIcons/icon-close.svg"/>
-            </button>
+            </button>*/}
 
-            <div className = 'thumbnails'
-            style={{display: (windowWidth>=720) ? 'flex' : 'none',
-                    flexDirection: (windowWidth>810) ? 'row' : 'column',
-                    alignItems: (windowWidth>810) ? '' : 'flex-start',
-                    paddingTop: (windowWidth<=810 && windowWidth>=720) ? '1%' : '5%',
-                    width: (windowWidth<=810 && windowWidth>=720) ? '20%' : '100%'}}
-            >
+            <div className = 'thumbnails'>
                 <div className="outerFrame"
                 style = {{borderStyle: currentFocus==0 ? 'solid' : 'none', 
                         borderColor: 'orangeRed', 
                         borderWidth: '2px', 
-                        borderRadius: '10px',
-                        width: (windowWidth<=810 && windowWidth>=720) ? '70%' : '20%'}}
+                        borderRadius: '10px'}}
                 >
                     <img src = {images[0].thumbnail} onClick = {() => {setCurrentFocus(0)}}/>
                     <div className="selection-on"
@@ -112,8 +110,7 @@ function SlideShow ({currentFocus,
                 style = {{borderStyle: currentFocus==1 ? 'solid' : 'none', 
                         borderColor: 'orangeRed', 
                         borderWidth: '2px', 
-                        borderRadius: '10px',
-                        width: (windowWidth<=810 && windowWidth>=720) ? '70%' : '20%'}}>
+                        borderRadius: '10px'}}>
                     <img src = {images[1].thumbnail} onClick = {() => {setCurrentFocus(1)}}/>
                     <div className="selection-on"
                     style = {{display: currentFocus==1 ? 'block' : 'none'}}></div>
@@ -122,8 +119,7 @@ function SlideShow ({currentFocus,
                 style = {{borderStyle: currentFocus==2 ? 'solid' : 'none', 
                         borderColor: 'orangeRed', 
                         borderWidth: '2px', 
-                        borderRadius: '10px',
-                        width: (windowWidth<=810 && windowWidth>=720) ? '70%' : '20%'}}>
+                        borderRadius: '10px'}}>
                     <img src = {images[2].thumbnail} onClick = {() => {setCurrentFocus(2)}}/>
                     <div className="selection-on"
                     style = {{display: currentFocus==2 ? 'block' : 'none'}}></div>
@@ -132,8 +128,7 @@ function SlideShow ({currentFocus,
                 style = {{borderStyle: currentFocus==3 ? 'solid' : 'none', 
                         borderColor: 'orangeRed', 
                         borderWidth: '2px', 
-                        borderRadius: '10px',
-                        width: (windowWidth<=810 && windowWidth>=720) ? '70%' : '20%'}}>
+                        borderRadius: '10px'}}>
                     <img src = {images[3].thumbnail} onClick = {() => {setCurrentFocus(3)}}/>
                     <div className="selection-on"
                     style = {{display: currentFocus==3 ? 'block' : 'none'}}></div>
