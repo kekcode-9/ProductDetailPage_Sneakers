@@ -59,19 +59,19 @@ function Navbar ({cart,
                     <img src="productDetailPageIcons/icon-close.svg"></img>
                 </div>
                 <div className="burger-link">
-                    <a href="#">Collections</a>
+                    <a href="#" id="burger-link-text">Collections</a>
                 </div>
                 <div className="burger-link">
-                    <a href="#">Men</a>
+                    <a href="#" id="burger-link-text">Men</a>
                 </div>
                 <div className="burger-link">
-                    <a href="#">Women</a>
+                    <a href="#" id="burger-link-text">Women</a>
                 </div>
                 <div className="burger-link">
-                    <a href="#">About</a>
+                    <a href="#" id="burger-link-text">About</a>
                 </div>
                 <div className="burger-link">
-                    <a href="#">Contact</a>
+                    <a href="#" id="burger-link-text">Contact</a>
                 </div>
             </div>
 
