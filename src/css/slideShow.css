@@ -11,7 +11,7 @@
     position: relative;
 }
 
-.focus > img {
+.focus-image {
     width: 100%;
     overflow: hidden;
     border: transparent solid;
@@ -62,13 +62,13 @@
     width: 55%;
 }
 
-.closeModal {
+.close-modal {
     background-color: transparent;
     border-style: none;
     cursor: pointer;
 }
 
-.closeModal:active {
+.close-modal:active {
     aspect-ratio: 1/1;
     transform: scale(1.5);
     background-color: rgb(231, 164, 164);
@@ -88,9 +88,7 @@
         0 0 151px hsl(26, 100%, 55%);
 }
 
-@media screen and (min-width: 811px) and (max-width: 1024px){
-    
-    
+@media screen and (min-width: 811px) and (max-width: 1024px){  
     #nextButton {
         margin-right: /*23.5%*/ -0.7%;
     }
@@ -110,6 +108,68 @@
     }
 }
 
+@media screen and (min-width: 811px) {
+    .slider {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .focus {
+        width: 100%;
+    }
+
+    .thumbnails {
+        flex-direction: row;
+        padding-top: 5%;
+        width: 100%;
+    }
+
+    .outerFrame {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .slider {
+        flex-direction: row-reverse;
+    }
+
+    .thumbnails {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 810px) and (min-width: 720px) {
+    .slider {
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .focus {
+        width: 70%;
+    }
+
+    .thumbnails {
+        padding-top: 1%;
+        width: 20%;
+    }
+
+    .outerFrame {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .focus-image {
+        border-radius: 10px;
+    }
+
+    .thumbnails {
+        display: flex;
+    }
+}
+
 @media screen and (max-width: 720px) {
     #nextButton {
         margin-right: -3%;
@@ -117,6 +177,24 @@
 
     #prevButton {
         left: -3%;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .slider {
+        justify-content: center;
+    }
+
+    .focus {
+        width: 100%;
+    }
+
+    .focus-image {
+        border-radius: 0px;
+    }
+
+    .thumbnails {
+        display: none;
     }
 }
 

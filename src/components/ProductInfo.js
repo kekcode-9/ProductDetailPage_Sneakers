@@ -33,13 +33,7 @@ function ProductInfo ({cart,
     }
 
     return (
-        <div className="product-info"
-        style={{width: (windowWidth>810) ? 'min(50%, 600px)' : ((windowWidth>=720) ? '80%' : '100%'),
-                marginLeft: (windowWidth>810) ? '8%' : ((windowWidth>=720) ? '0%' : '3%'),
-                marginTop: (windowWidth<=810 && windowWidth>720) ? '10%' : '5%',
-                height: (windowWidth>=720) ? '60%' : '100%'
-                }}
-        >
+        <div className="product-info">
             <div className="seller">
                 SNEAKER COMPANY
             </div>
@@ -47,9 +41,7 @@ function ProductInfo ({cart,
             >
                 {productName}
             </div>
-            <div className="product-description"
-            style={{textAlign: (windowWidth>=1070) ? 'justify' : 'left'}}
-            >
+            <div className="product-description">
                 These low-profile sneakers are your perfect casual wear companion. Featuring a 
                 durable rubber outer sole, they’ll withstand everything the weather can offer.
             </div>
@@ -58,26 +50,16 @@ function ProductInfo ({cart,
                 <div id="discount">50%</div>
                 <div id="original-price">$250.00</div>
             </div>
-            <div className="buying-option" 
-            style={{flexDirection: (windowWidth>=960) ? 'row' : 'column'}}
-            >
-                <div className="quantity-selector"
-                style={{height: (windowWidth>=960) ? '100%' : '33%',
-                        width: (windowWidth>=960) ? '30%': '100%'}}
-                >
+            <div className="buying-option">
+                <div className="quantity-selector">
                     <div id="minus" onClick = {() => { quantityUpdate(-1) }}>-</div>
                     <div id="quantity">{quantity}</div>
                     <div id="plus" onClick = {() => { quantityUpdate(1) }}>+</div>
                 </div>
                 <div className="add-to-cart" 
-                style={{height: (windowWidth>=960) ? '100%' : '33%',
-                width: (windowWidth>=960) ? '60%': '100%'}}
                 onClick={() => {addToCart(productName, price, quantity, imgSrc)}}
                 >
                     {(!isInCart) ? 'Add to cart' : 'Go to cart'}
-                    {/*<div className="add-to-cart-wrapper">
-                        
-                    </div>*/}
                 </div>
             </div>
         </div>

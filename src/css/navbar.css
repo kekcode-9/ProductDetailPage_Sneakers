@@ -230,46 +230,6 @@
     text-shadow: 2px 2px 17px hsl(26, 100%, 55%);
 }
 
-@keyframes cart-fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes cart-fade-out {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes slide-in-burger-menu {
-    0% {
-        left: -24vh;
-    }
-
-    100% {
-        left: 0vh;
-    }
-}
-
-@keyframes slide-out-burger-menu {
-    0% {
-        left: 0vh;
-    }
-
-    100% {
-        left: -24vh;
-    }
-}
-
 #items {
     height: 38%;
 }
@@ -311,6 +271,46 @@
     width: 100%;
     padding-left: 7%;
     padding-top: 7%;
+}
+
+@keyframes cart-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes cart-fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-in-burger-menu {
+    0% {
+        left: -24vh;
+    }
+
+    100% {
+        left: 0vh;
+    }
+}
+
+@keyframes slide-out-burger-menu {
+    0% {
+        left: 0vh;
+    }
+
+    100% {
+        left: -24vh;
+    }
 }
 
 @media screen and (min-width: 1074px) {

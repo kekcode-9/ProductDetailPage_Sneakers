@@ -20,11 +20,7 @@ function ImageGallery ({currentFocus,
     }, [isFocusClicked]);
 
     return (
-        <div className = 'gallery'
-        style={{width: (windowWidth>810) ? 'min(50%, 400px)' : '100%',/*
-                height: (windowWidth>810) ? '' : '40%',*/
-                paddingLeft: (windowWidth>810) ? '2%' : '0%'}}
-        >
+        <div className = 'gallery'>
             <SlideShow
             currentFocus = {currentFocus}
             setCurrentFocus = {setCurrentFocus}
